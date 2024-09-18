@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shopescreen/feature/home/data/model/products.dart';
 import 'package:shopescreen/feature/home/presentation/manager/cubit/products_cubit.dart';
 import 'package:shopescreen/feature/home/presentation/view/screens/shope_screen/product_card.dart';
@@ -33,8 +34,8 @@ class _ProductGridState extends State<ProductGrid> {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 0.71,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
+              crossAxisSpacing: 16.w,
+              mainAxisSpacing: 16.h,
             ),
             itemCount: product.length,
             itemBuilder: (context, index) {
